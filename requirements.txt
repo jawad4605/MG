@@ -1,0 +1,10 @@
+Flask
+pandas
+scipy
+gspread
+oauth2client
+
+
+
+
+###### run this command on your cmd using adminstrator    

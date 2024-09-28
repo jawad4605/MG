@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Performance Prediction</h1>
+    <form action="/predict_performance" method="POST">
+        <label for="Training_Hours">Training Hours:</label>
+        <input type="number" id="Training_Hours" name="Training_Hours" required><br><br>
+        
+        <input type="submit" value="Predict Performance">
+    </form>
+    
+    <a href="/">Go Back</a>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; MG apparel.</p>
+    </footer>
+</body>
+</html>

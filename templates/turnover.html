@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnover Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Turnover Prediction</h1>
+    <form action="/predict_turnover" method="POST">
+        <label for="Salary">Salary:</label>
+        <input type="number" id="Salary" name="Salary" required><br><br>
+        
+        <label for="Satisfaction">Satisfaction (0 = Dissatisfied, 1 = Satisfied):</label>
+        <input type="number" id="Satisfaction" name="Satisfaction" min="0" max="1" required><br><br>
+        
+        <label for="Years_Tenure">Years Tenure:</label>
+        <input type="number" id="Years_Tenure" name="Years_Tenure" required><br><br>
+        
+        <input type="submit" value="Predict Turnover">
+    </form>
+    
+    <a href="/">Go Back</a>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; MG apparel.</p>
+    </footer>
+</body>
+</html>
