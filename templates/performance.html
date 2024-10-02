@@ -10,15 +10,11 @@
     <h1>Performance Prediction</h1>
     <form action="/predict_performance" method="POST">
         <label for="Training_Hours">Training Hours:</label>
-        <input type="number" id="Training_Hours" name="Training_Hours" required><br><br>
-        
+        <input type="text" id="Training_Hours" name="Training_Hours" required>
         <input type="submit" value="Predict Performance">
     </form>
-    
-    <a href="/">Go Back</a>
-    <!-- Footer -->
-    <footer>
-        <p>&copy; MG apparel.</p>
-    </footer>
+    <div class="button-container">
+        <a href="{{ url_for('home') }}" class="button">Back to Home</a>
+    </div>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi-Square Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Chi-Square Test</h1>
+
+    <!-- Flash message section -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash-message">
+          <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <!-- Form to get Chi-Square data from Google Sheets -->
+    <form action="/get_chi_square_data" method="POST" class="fetch-button">
+        <input type="submit" value="Fetch Chi-Square Data">
+    </form>
+
+    <!-- Button to calculate the Chi-Square -->
+    <form action="/calculate_chi_square" method="POST" class="calculate-button">
+        <input type="submit" value="Calculate Chi-Square">
+    </form>
+
+    {% if table_data %}
+        <h2>Fetched Data:</h2>
+        <div class="data-table">{{ table_data | safe }}</div>
+    {% endif %}
+
+    <div class="button-container">
+        <a href="{{ url_for('home') }}" class="button">Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; MG apparel.</p>
+    </footer>
+</body>
+</html>

@@ -7,13 +7,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h1>{{ prediction_type }} Result</h1>
-    <p>{{ prediction_type }}: {{ prediction_value }}</p>
-    
-    <a href="/">Go Back</a>
-    <!-- Footer -->
-    <footer>
-        <p>&copy; MG apparel.</p>
-    </footer>
+    <h1>{{ prediction_type }} Prediction Result</h1>
+    <p>The predicted {{ prediction_type.lower() }} is: {{ prediction_value }}</p>
+    <div class="button-container">
+        <a href="{{ url_for('home') }}" class="button">Back to Home</a>
+    </div>
 </body>
 </html>

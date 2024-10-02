@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prediction App</title>
+    <title>Home</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h1>Welcome to the Prediction App</h1>
-    <p>Please choose one of the prediction tasks below:</p>
-    
+    <h1>Welcome to the MG HR Data Prediction and Analysis App</h1>
     <div class="button-container">
-        <a href="{{ url_for('performance_form') }}" class="button">Performance Prediction</a>
-        <a href="{{ url_for('turnover_form') }}" class="button">Turnover Prediction</a>
+        <a href="{{ url_for('performance_form') }}" class="button">Predict Performance</a>
+        <a href="{{ url_for('turnover_form') }}" class="button">Predict Turnover</a>
+        <a href="{{ url_for('correlation_form') }}" class="button">Calculate Correlation</a>
+        <a href="{{ url_for('chi_square_form') }}" class="button">Chi-Square Test</a>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; MG apparel.</p>
-    </footer>
+</body>
+</html>
+ <!-- Footer -->
+ <footer>
+    <p>&copy; MG apparel.</p>
+</footer>
 </body>
 </html>
